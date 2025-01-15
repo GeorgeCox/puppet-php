@@ -199,8 +199,7 @@ class php::globals (
         fail("Unsupported osfamily: ${facts['os']['family']}")
       }
     }
+    $globals_config_root    = pick($config_root, $default_config_root)
+    $globals_fpm_pid_file   = pick($fpm_pid_file, $default_fpm_pid_file)
   }
-
-  $globals_config_root    = pick($config_root, $default_config_root)
-  $globals_fpm_pid_file   = pick($fpm_pid_file, $default_fpm_pid_file)
 }
