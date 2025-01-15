@@ -23,7 +23,8 @@
 #
 
 class php::globals (
-  Optional[Pattern[/^(rh-)?(php)?[578](\.)?[0-9]/]] $php_version = undef,
+  #Optional[Pattern[/^(rh-)?(php)?[578](\.)?[0-9]/]] $php_version = undef,
+  $php_version = undef,
   Optional[Stdlib::Absolutepath] $config_root                    = undef,
   Optional[Stdlib::Absolutepath] $fpm_pid_file                   = undef,
   Optional[Enum['rhscl', 'remi']] $rhscl_mode                    = undef,
